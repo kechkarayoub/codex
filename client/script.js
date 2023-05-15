@@ -64,7 +64,7 @@ const handleSubmit = async (e) => {
   const messageDiv = document.getElementById(uniqueId);
   loader(messageDiv);
 
-  const response = await fetch(process.env.BACKEND_URL, {
+  const response = await fetch(import.meta.env.VITE_BACKEND_URL, {
     method: "POST",
     headers: {
       'Content-Type': 'application/json',
